@@ -29,6 +29,7 @@
   <body>
     <div class="reveal">
       <div class="slides">
+        <section data-background-image="images/dfu-circle.svg"></section>
         <section>
           <div class="outside-grid">
             <div class="grid-item">D</div>
@@ -192,7 +193,7 @@
 
             * Domain "squatting" is still a thing though
             * It's against the rules to register domain names that are common typos for other domains
-             * eg **facebok.com** 
+             * eg **facebok.com**
           </section>
           <section>
             <p class="fragment"><strong><em>snitch-jacket</em>, transitive verb</strong></p>
@@ -253,9 +254,17 @@
             <p class="fragment">... maybe, like a filing cabinet + a butler?</p>
           </section>
           <section data-markdown>
-            ## Hosting extras
+            ## Hosting … what other stuff?
 
-            Hosts can also do lots of other things but they're too boring for today.
+            Different hosting providers offer lots of other things:
+
+            * Matching email addresses for your domain
+             * tips@snitchjacket.fashion
+            * Protection against DDoS attacks
+            * Help you set up _subdomains_
+             * blog.snitchjacket.fashion
+             * photos.snitchjacket.fashion
+            * Lots of other stuff … from e-commerce to site analytics
           </section>
           <section data-markdown>
             ## Some options for hosting
@@ -408,27 +417,131 @@
           </section>
         </section>
         <section>
-          <h2>Web pages we just created</h2>
+          <section data-markdown>
+            ## Stylesheet templates, themes and frameworks
+
+            * CSS is a rather difficult art
+             * Many interacting aesthetic decisions make up a coherent style
+             * Mobile styles are harder still
+             * Significant industry sector selling "templates" and "themes" with pre-built styles
+            * Frameworks such as [Bootstrap](https://getbootstrap.com) and [Foundation](https://foundation.zurb.com/) provide a starting point
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## 3. Create a "Contact Us" form with [FormSpree](https://formspree.io/)
+
+            * FormSpree allows us to set up a &lt;form&gt; element in our web page that will email us when someone submits a message
+            * We don't need a server or a mail host for this
+            * We'll also use the [Bootstrap](https://getbootstrap.com/) framework for slicker form styling
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## 4. Generative art with [ProcessingJS](http://processingjs.org/)
+
+            * ProcessingJS is a port of the [Processing Visual Language](https://processing.org/overview/) to the browser
+            * It's designed to cross-pollinate the worlds of visual art and software engineering
+          </section>
+          <section>
+            <h2>4. Generative art with <a href="http://processingjs.org/">ProcessingJS</a></h2>
+            <ul>
+              <li>ProcessingJS uses the &lt;canvas&gt; element to build detailed 2D images with JavaScript</li>
+              <li>We'll investigate a <a href="page4.html" target="_blank">clone of an exhibited generative artwork</a> by <a href="http://mariuswatz.com/" target="_blank">Marius Watz</a>: <br>
+            <pre><code data-trim>
+            // amoebaAbstract_01_formatik
+            // Copyright 2003 Marius Watz
+            // http://www.evolutionzone.com/
+            //
+            // Variation on abstract computational animation
+            // for the exhibition "Abstraction Now",
+            // Künstlerhaus Vienna, 29.08-28.09 2003.
+            </code></pre>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## 5. Creating maps with [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/examples/)
+
+            * Online maps can be hosted inside web pages you create
+            * With these maps you can render topical data, symbology, sensor data and more
+            * Mapbox GL JS is one of several popular JavaScript mapping libraries for the Web
+             * see also _OpenLayers_ and _LeafletJS_
+          </section>
+          <section>
+            <h2>5. Creating maps with <a href="https://docs.mapbox.com/mapbox-gl-js/examples/">Mapbox GL JS</a></h2>
+            <ul>
+              <li>Mapbox GL JS uses the &lt;canvas&gt; element to render images using <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API" target="_blank">WebGL</a>
+              </li>
+              <li>WebGL is similar to a 3D or game programming API</li>
+              <li>We'll look at <a href="page5.html" target="_blank">map that allows us to animate between locations we search</a></li>
+            </ul>
+          </section>
+          <section data-markdown>
+            ## 5. Creating maps with [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/examples/)
+
+            * To use Mapbox GL JS, we needed an "API Key" (a token identifying us) from our Mapbox account
+            * This is because a lot of the content we're using is _not ours_ - it's hyperlinked!
+            * Map tile data for satellite and street maps comes from Mapbox servers
+            * Mapbox controls usage and may charge you
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## 6. Visualising data with [D3.js](https://bl.ocks.org)
+
+            * D3.js is a charting and dataviz library based on _pipelined_ transformation of source datasets using JavaScript
+            * Many, many examples online
+            * We've created a D3 Force Layout example [here](page6.html)
+            * This is a graph visualisation that relies on spacing graph nodes using a physics simulation
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## 7. 3D environments with [A-Frame](https://aframe.io)
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## Other possibilities
+
+            * Write your presentations using [RevealJS](https://github.com/hakimel/reveal.js/)
+            * Host blogs, business sites and others using [Jekyll](https://jekyllrb.com/)
+            * Host interactive chat-bots with [DialogFlow](https://dialogflow.com/)
+            * Sound synthesis with [HowlerJS](https://howlerjs.com/) or [Tone.js](https://tonejs.github.io/examples/)
+            * JavaScript-based game programming with [Elm](https://medium.com/@l.mugnaini/beginner-tutorials-how-to-build-a-game-in-elm-5491d6de8f25)
+          </section>
+        </section>
+        <section>
+          <h2>Stuff we just built</h2>
           <ol>
             <li>
-              <a href="page1.html" target="_blank">"Hello, DFU!" (mucking around in CodePen)</a>
+              <a href="page1.html" target="_blank">1. "Hello, DFU!" (mucking around in CodePen)</a>
             </li>
             <li>
-              <a href="page2.html" target="_blank">"Hello, DFU!" (restyled)</a>
+              <a href="page2.html" target="_blank">2. "Hello, DFU!" (restyled)</a>
             </li>
             <li>
-              <a href="page3.html" target="_blank">Send me messages!</a>
+              <a href="page3.html" target="_blank">3. Send me messages!</a>
             </li>
             <li>
-              <a href="page4.html" target="_blank">ProcessingJS</a>
+              <a href="page4.html" target="_blank">4. ProcessingJS</a>
             </li>
             <li>
-              <a href="page5.html" target="_blank">Mapbox GL JS</a>
+              <a href="page5.html" target="_blank">5. Mapbox GL JS</a>
             </li>
             <li>
-              <a href="page6.html" target="_blank">A-Frame</a>
+              <a href="page6.html" target="_blank">6. D3 Force Layout</a>
+            </li>
+            <li>
+              <a href="page7.html" target="_blank">7. A-Frame</a>
             </li>
           </ol>
+        </section>
+        <section data-background-image="images/hackers.jpeg">
+          # Thanks!
         </section>
       </div>
     </div>

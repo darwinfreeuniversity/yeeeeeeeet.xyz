@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+body {
+	margin:0;
+  overflow: hidden;
+}
+
+
+.main {
+	margin:0 auto;
+  padding: 15px;
+  background-color:#FFF;
+}
+
+#processing {
+	border-top:1px solid #000;
+}
+

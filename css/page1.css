@@ -1,0 +1,37 @@
+body {
+  font-size: 400%;
+  font-family: Arial;
+  width: 60%;
+  max-width: 1500px;
+  margin: auto;
+}
+
+h1 {
+  background-color: blue;
+  color: red;
+  /*transform: rotate(-3deg);*/
+  margin-bottom: 100px;
+  /*animation: spin 5000ms infinite linear;*/
+}
+
+table {
+  width: 70%;
+  margin: auto;
+  border: 2px solid pink;
+}
+
+td, th {
+  font-size: 200%;
+  text-align: left;
+  border: 1px solid orange;
+  padding: 10px;
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
