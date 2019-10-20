@@ -1,49 +1,453 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/masonry-animations.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- Printing and PDF exports -->
+    <script>
+     var link = document.createElement( 'link' );
+     link.rel = 'stylesheet';
+     link.type = 'text/css';
+     link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+     document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div class="outside-grid">
+            <div class="grid-item">D</div>
+            <div class="grid-item">F</div>
+            <div class="grid-item">U</div>
+            <div class="grid-item">&bull;</div>
+            <div class="grid-item">&bull;</div>
+            <div class="grid-item">B</div>
+            <div class="grid-item">U</div>
+            <div class="grid-item">I</div>
+            <div class="grid-item">L</div>
+            <div class="grid-item">D</div>
+            <div class="grid-item">I</div>
+            <div class="grid-item">N</div>
+            <div class="grid-item">G</div>
+            <div class="grid-item">&bull;</div>
+            <div class="grid-item">O</div>
+            <div class="grid-item">N</div>
+            <div class="grid-item">L</div>
+            <div class="grid-item">I</div>
+            <div class="grid-item">N</div>
+            <div class="grid-item">E</div>
+            <div class="grid-item">&bull;</div>
+            <div class="grid-item">&bull;</div>
+            <div class="grid-item">S</div>
+            <div class="grid-item">P</div>
+            <div class="grid-item">A</div>
+            <div class="grid-item">C</div>
+            <div class="grid-item">E</div>
+            <div class="grid-item">S</div>
+          </div>
+        </section>
+        <section data-markdown>
+          ## Acknowledgement of Country
 
-		<script src="js/reveal.js"></script>
+          _This DFU workshop is being held on the traditional lands of the Larrakia people.
+          We pay our respect to elders past, present and emerging._
+        </section>
+        <section data-markdown data-background-image="images/do-not-copy.png">
+          ## Don't take notes from the slides
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
+          * This talk is a web page
+          * You can go back and look at it all (or add to it!) later
+        </section>
+        <section data-markdown>
+          ## The Internet and the World Wide Web
+
+          * Comes out of defence and science research
+          * The Internet started life as a US Defence research project at DARPA
+          * World Wide Web invented in 1989 at CERN
+          * The Internet had only 16 million users in 1995
+        </section>
+        <section>
+          <h2>The Internet and the World Wide Web</h2>
+
+          <p><em>From the very early days, people thought about the political nature of the Internet …</em></p>
+          <p class="fragment"><em>… the Internet can be thought of as a utopian project (or set of projects) offering the possibility of radical, historically unprecedented human connection and sharing</em></p>
+        </section>
+        <section data-markdown>
+          ## Fast forward to 2019
+
+          * 4 billion users, but …
+          * Over 50% of Internet traffic is non-human
+          * Streaming TV is now 58% of "downstream" (consumer) bandwidth usage
+          * The most popular websites by hit count are:
+           * Google
+           * Facebook
+           * Baidu (Chinese Facebook compettitor)
+        </section>
+        <section data-markdown>
+          ## To-do list for today
+
+          1. ~~Learn about WordPress~~
+          1. ~~Learn to code~~
+          1. Put some **stuff** _online_!
+        </section>
+        <section>
+          <section>
+            <h1>What is the World Wide Web?</h1>
+
+            <p class="fragment">(Okay, it's sort of a <span class="blink-something">gorgeously stupid name</span>)</p>
+            <p class="fragment"><strong>World</strong>: it's meant to be global</p>
+            <p class="fragment"><strong>Wide</strong>: anyone with a <em>host</em> can put content <em>online</em></p>
+            <p class="fragment"><strong>Web</strong>: Content <em>indexes</em> itself and allows navigation using <em>hyperlinks</em></p>
+          </section>
+          <section data-markdown>
+            ### Sidebar: Hypertext
+
+            * Includes stuff other than the World Wide Web
+            * It's kinda related to the cognitive _indexing_ processes vital to many new kinds of work ("knowing how to know things" versus "knowing things")
+          </section>
+          <section>
+            <h2>Sidebar: Hypertext</h2>
+
+            <p class="fragment">There is too much to know, so …</p>
+            <p class="fragment"><span class="blink-something orange">Google</span> all the things, then …</p>
+            <p class="fragment"><span class="blink-something orange">Bookmark</span> all the things that are actually good</p>
+          </section>
+          <section>
+            <img src="images/ulysses.jpeg">
+          </section>
+          <section>
+            <img src="images/garden-of-forking-paths.jpeg">
+          </section>
+          <section>
+            <h2>Nabokov's PALE FIRE visualised as hypertext</h2>
+            <img src="images/pale-fire-hypertext.jpeg">
+          </section>
+          <section>
+            <img src="images/choose-your-own-adventure.jpeg">
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            ## How do we put our stuff on the World Wide Web?
+
+            * Write angry comments on Facebook
+          </section>
+          <section data-markdown>
+            ## How do we put our stuff on the World Wide Web?
+
+            * ~~Write angry comments on Facebook~~
+          </section>
+          <section>
+            <h2>How do we put our stuff on the World Wide Web?</h2>
+
+            <p class="fragment">So to put our <strong>own stuff</strong> on the web, we need:</p>
+            <ol>
+              <li class="fragment">A <em>domain name</em> where people can find us</li>
+              <li class="fragment">A <em>host</em> that can hold our content and deliver it to people</li>
+              <li class="fragment">To put our <strong>stuff</strong> into <em>special formats</em> that lets other people view it: <span class="fragment">HTML, CSS, JavaScript</span></li>
+            </ol>
+          </section>
+        </section>
+        <section data-markdown>
+          ## To-do list for today
+
+          1. ~~Put some **stuff** _online_~~
+          1. **Purchase a domain**
+          1. Set up a host
+          1. Learn how to create content
+           * Learn some languages!
+          1. Put the content on the host
+          1. Point the domain at the host
+          1. Look at more weird / fun content
+        </section>
+        <section>
+          <section>
+            <h2 class="blink-something">Let's go domain shopping</h2>
+          </section>
+          <section data-markdown>
+            ## Sidebar: domain names
+
+            * Once people were desperate to own the **.com** or **.net** or **.org** version of their business / org name
+            * Last ten years: people care a lot less
+            * There are lots of new, cheap **Top Level Domains** (**.business**, **.fashion**, **.io**, **.map**, **.local**, **.university**)
+            * It costs just a few bucks to own a domain
+          </section>
+          <section data-markdown>
+            ## Sidebar: domain names
+
+            * Domain "squatting" is still a thing though
+            * It's against the rules to register domain names that are common typos for other domains
+             * eg **facebok.com** 
+          </section>
+          <section>
+            <p class="fragment"><strong><em>snitch-jacket</em>, transitive verb</strong></p>
+            <p class="fragment">To imply to your fellow conspirators and rebels that another member of your underground organisation is actually a police informant</p>
+          </section>
+          <section>
+            <h2>Let's go domain shopping</h2>
+            <p class="fragment">Dodgy clip art incoming</p>
+          </section>
+          <section data-background-image="images/dodgy-domain-clipart.jpeg">
+            <a href="https://namecheap.com" target="_blank">
+              <h2 class="blink-something orange"">Let's go domain shopping</h2>
+            </a>
+          </section>
+          <section data-markdown>
+            ## Our new domain
+
+            * We now "own" that domain (bought from [**namecheap.com**](https://namecheap.com)
+            * We can point that domain name at any _host address_ we want
+            * No one else can use it
+            * One year's time: we start getting emails telling us to renew it
+            * If we don't renew it, links to it will stop working
+          </section>
+          <section data-markdown>
+            ## Hypothetical: what if I want a completely secret domain?
+
+            * Always use a VPN to connect, administer and pay
+            * Use a domain registrar based in a jurisdiction that doesn't have intelligence treaties with your "enemies"
+            * Give false technical and owner contact info
+            * Use WHOIS protections anyway
+            * Pay with scrambled crypto currency
+            * Still probably not totally secret!
+          </section>
+        </section>
+        <section data-markdown>
+          ## To-do
+
+          1. ~~Put some **stuff** _online_~~
+          1. ~~Purchase a domain~~
+          1. **Set up a host**
+          1. Learn how to create content
+           * Learn some languages?!?!
+          1. Put the content on the host
+          1. Point the domain at the host
+          1. Look at more weird / fun content
+        </section>
+        <section>
+          <section>
+            <h2>Hosting</h2>
+            <img src="images/filing-cabinet.jpeg" class="img-inline">
+            <img src="images/plus-sign.jpeg" class="img-inline" style="width:200px;">
+            <img src="images/butler.jpeg" class="img-inline">
+          </section>
+          <section>
+            <h2>Hosting</h2>
+            <p class="fragment">A <em>host</em> can be thought of as like a "filing cabinet" for your <em>content</em>
+              that can give it to someone when they ask for it …</p>
+            <p class="fragment">... maybe, like a filing cabinet + a butler?</p>
+          </section>
+          <section data-markdown>
+            ## Hosting extras
+
+            Hosts can also do lots of other things but they're too boring for today.
+          </section>
+          <section data-markdown>
+            ## Some options for hosting
+
+            * Option 1: a "server" (ie your computer connected to the internet)
+            * Option 2: "on the cloud" (ie someone else's computer on the net)
+            * Option 3: a _static website_ (ie you just need a "storage bucket")
+          </section>
+          <section>
+            <h2>GitHub Pages</h2>
+
+            <ul>
+              <li>A (mostly) free, open hosting option</li>
+              <li>If you're not paying, other people can see (and maybe use) your content
+                <ul>
+                  <li><span class="orange">This Is Actually A Good Thing</span></li>
+                </ul>
+              </li>
+              <li>Suitable for "static" sites (content only changes when you edit it)</li>
+            </ul>
+          </section>
+          <section data-markdown>
+            ## GitHub Pages
+
+            * [GitHub](https://github.com) supports **version control** for changes
+            * If you get serious about text or code, use version control!
+            * We will see some basic stuff about how it works as we go through today
+            * GitHub is a world-leading platform for _collaborating with others_
+          </section>
+          <section data-background-image="images/github-background.jpeg">
+            <a href="https://github.com" target="_blank">
+              <h2 class="blink-something orange">Let's go set up a GitHub</h2>
+            </a>
+          </section>
+          <section data-markdown>
+            ## Our new GitHub
+
+            * We created an account on [**GitHub**](https://github.com)
+            * We created a special _repository_ ("filing cabinet") with our account
+            * The information on GitHub is completely public
+            * We are going to start putting our **stuff** in there
+          </section>
+        </section>
+        <section data-markdown>
+          ## To-do
+
+          1. ~~Put some **stuff** _online_~~
+          1. ~~Purchase a domain~~
+          1. ~~Set up a host~~
+          1. **Learn how to create content**
+           * Learn some languages?!?!
+          1. Put the content on the host
+          1. Point the domain at the host
+          1. Look at more weird / fun content
+        </section>
+        <section>
+          <h2>Languages of the Web</h2>
+
+          <p class="fragment blink-something orange">These all have stupid names</p>
+          <ul>
+            <li class="fragment"><strong>HyperText Markup Language (HTML)</strong></li>
+            <li class="fragment"><strong>Cascading Style Sheets (CSS)</strong></li>
+            <li class="fragment"><strong>JavaScript <span class="fragment blink-something orange">???</span></strong></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Languages of the Web</h2>
+
+          <p><em>The combination of HTML, JavaScript and CSS is powerful enough to replace nearly all your publishing and computing needs …</em></p>
+          <p class="fragment"><em>… with the huge benefit that it's easy to give things to lots of other people</em></p>
+        </section>
+        <section>
+          <section>
+            <h2>HyperText Markup Language</h2>
+
+            <p class="fragment">HTML is for describing the <em>structure</em> of <em>documents</em> along with the text that goes into them …</p>
+            <p class="fragment">… let's take a look at a very basic HTML document</p>
+            <pre class="fragment">
+              <code data-trim>
+              &lt;html&gt;
+                &lt;head&gt;
+                  &lt;title&gt;Hello, DFU!&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;p&gt;Hello, DFU!&lt;/p&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>HyperText Markup Language</h2>
+
+            <pre>
+              <code data-trim>
+              &lt;!-- The document is made up of &quot;tags&quot; like &lt;html&gt;&lt;/html&gt;
+              and &lt;head&gt;&lt;/head&gt; --&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  &lt;title&gt;Hello, DFU!&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;p&gt;Hello, DFU!&lt;/p&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>HTML</h2>
+
+            <ul>
+              <li>
+                HTML describes the <strong>structure</strong> of a web page
+              </li>
+              <li>A <em>tag</em> like &lt;html&gt; usually has a <em>closing tag</em> &lt;/html&gt;</li>
+              <li>Tags can be nested inside each other
+                  <ul>
+                    <li>eg &lt;title&gt; goes inside &lt;head&gt;</li>
+                    <li>eg paragraph tag &lt;p&gt; goes inside block tag &lt;div&gt;</li>
+                  </ul>
+              </li>
+              <li>Lots of rules you don't need to know about</li>
+            </ul>
+          </section>
+          <section data-markdown>
+            ## How to learn HTML (or anything)
+
+            * Change the _markup_ and the _web page_ changes
+            * _Shorten the feedback loop_
+            * Use a tool that _auto-refreshes_ your page
+          </section data-markdown>
+          <section>
+            <h2>Inventing on Principle</h2>
+            <p>A cool 1h talk about how to <span class="blink-something orange">learn things fast</span></p>
+            <iframe width="915" height="366" src="https://www.youtube.com/embed/PUv66718DII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </section>
+          <section data-markdown>
+            ## [CodePen](https://codepen.io/)
+
+            * Useful tool for experimenting with HTML, JavaScript and CSS
+            * Lets you see your changes heads up
+            * Helps you beg, borrow or steal ideas from others
+            * One of many: see also **jsFiddle**, **JS Bin** etc
+          </section>
+          <section data-background-image="images/codepen.png">
+            <a href="https://codepen.io" target="_blank">
+              <h2 class="blink-something orange">Let's go check out CodePen!</h2>
+            </a>
+          </section>
+        </section>
+        <section>
+          <h2>Web pages we just created</h2>
+          <ol>
+            <li>
+              <a href="page1.html" target="_blank">"Hello, DFU!" (mucking around in CodePen)</a>
+            </li>
+            <li>
+              <a href="page2.html" target="_blank">"Hello, DFU!" (restyled)</a>
+            </li>
+            <li>
+              <a href="page3.html" target="_blank">Send me messages!</a>
+            </li>
+            <li>
+              <a href="page4.html" target="_blank">ProcessingJS</a>
+            </li>
+            <li>
+              <a href="page5.html" target="_blank">Mapbox GL JS</a>
+            </li>
+            <li>
+              <a href="page6.html" target="_blank">A-Frame</a>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+    <script src="js/building-online-spaces.js"></script>
+
+    <script>
+     // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+     // - https://github.com/hakimel/reveal.js#dependencies
+     Reveal.initialize({
+       dependencies: [
+         { src: 'plugin/markdown/marked.js' },
+         { src: 'plugin/markdown/markdown.js' },
+         { src: 'plugin/notes/notes.js', async: true },
+         { src: 'plugin/highlight/highlight.js', async: true }
+			 ]
+		 });
 		</script>
 	</body>
 </html>

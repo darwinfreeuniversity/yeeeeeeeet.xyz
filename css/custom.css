@@ -1,0 +1,41 @@
+.blink-something {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+span.orange, p.orange {
+  color: red !important;
+}
+
+h2.orange {
+  font-size: 400%;
+  color: red !important;
+  font-weight: bold;
+  text-shadow: 8px 8px pink;
+}
+
+.img-inline {
+  width: 300px;
+  display: inline;
+}
+
+/* Masonry */
+.outside-grid {
+  margin-top: -100px;
+}
+
+.grid-item {
+  text-transform: uppercase;
+  font-size: 300%;
+  line-height: 120px;
+  float:left;
+  width: 120px;
+  height: 120px;
+  border: 2px solid white;
+  margin: 5px;
+}
