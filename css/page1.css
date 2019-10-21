@@ -11,7 +11,7 @@ h1 {
   color: red;
   /*transform: rotate(-3deg);*/
   margin-bottom: 100px;
-  /*animation: spin 5000ms infinite linear;*/
+  animation: spin 5000ms infinite linear;
 }
 
 table {
