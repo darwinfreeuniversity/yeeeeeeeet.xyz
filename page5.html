@@ -22,13 +22,13 @@
     <div id='map'></div>
     <button id='styler' onclick='toggleStyle();'>Toggle map style</button>
     <script>
-     var styles= ['mapbox://styles/mapbox/satellite-v9', 'mapbox://styles/mapbox/streets-v9'];
+     var styles= ['mapbox://styles/mapbox/light-v9', 'mapbox://styles/mapbox/streets-v9'];
      var currentStyle = 0;
 
      mapboxgl.accessToken = 'pk.eyJ1IjoidHJhaWxtYXJrZXIiLCJhIjoiY2puMnEwZjdsMDRyeTNzcGFqbmxzdzg0ayJ9.4Yu8OBZza-MT8vQIPgd4og';
      var map = new mapboxgl.Map({
        container: 'map',
-       //style: 'mapbox://styles/mapbox/satellite-v9',
+       //style: 'mapbox://styles/mapbox/light-v9',
        style: styles[currentStyle],
        center: [130.855550, -12.390660],
        zoom: 15
@@ -46,7 +46,7 @@
          // These options control the flight curve, making it move
          // slowly and zoom out almost completely before starting
          // to pan.
-         speed: 2, // make the flying slow
+         speed: 10, // make the flying slow
          curve: 1, // change the speed at which it zooms out
          // This can be any easing function: it takes a number between
          // 0 and 1 and returns another number between 0 and 1.
